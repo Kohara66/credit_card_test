@@ -1,4 +1,4 @@
-package com.clara;
+package com.happy;
 
 import java.util.Scanner;
 
@@ -13,8 +13,8 @@ public class CreditCard {
 
         //Ask user for credit card number. store number as a String.
         System.out.println("Please enter the credit card number, digits only:");
-        String ccNumber = stringScanner.nextLine();
-        boolean isValid = isValidCreditCard(ccNumber);
+        String cardNumber = stringScanner.nextLine();
+        boolean isValid = isValidCreditCard(cardNumber);
 
         if (isValid) {
             System.out.println("This seems to be a valid credit card number");
@@ -25,16 +25,22 @@ public class CreditCard {
         stringScanner.close();
     }
 
-    public static boolean isValidCreditCard(String cc) {
 
-        //TODO Replace with your code to process the credit card number, and determine if it is valid.
-        //TODO Make sure all the tests pass!
+    public static boolean isValidCreditCard(String cardNumber) {
 
-        return false;
+
+        if (cardNumber.startsWith("4") && cardNumber.length() == 16) return true;
+        else {
+            return false;
+        }
 
     }
 
-
-
-
 }
+
+
+
+
+
+
+
